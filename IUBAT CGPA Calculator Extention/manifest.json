@@ -1,0 +1,19 @@
+{
+    "manifest_version": 2,
+    "name": "IUBAT CGPA Calculator",
+    "version": "2.6.1",
+    "description": "This calculator will help calculate the CGPA & SGPA of IUBAT University.",
+    "author": "Hmd Kamrul",
+    "icons":{
+        "128": "iubatt.png"
+    },
+    "browser_action":{
+        "default_popup": "popup.html",
+        "default_icon": "iubatt.png",
+        "default_title": "IUBAT CGPA Calculator"
+    },
+    "permissions":["activeTab"],
+    "background": {
+        "scripts": ["main.js"]
+    }
+}

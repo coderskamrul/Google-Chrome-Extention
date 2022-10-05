@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="image/iubat_icon.png" sizes="32x32">
+  
+   
+    <title>IUBAT SGPA & CGPA</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style> 
+    
+/* ---------Loading style----------- */
+
+body{
+    width: 400px;
+    height: 500px;
+    background-color: #F8F9FA;
+}
+
+::placeholder {
+
+  font-size: 10px;
+}
+
+/* ---------Loading style----------- */
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+#preloader {
+    position: absolute;
+    width: 12%;
+    height: 12%;
+    z-index: -999;
+    overflow: visible;
+    background: url('image/IUBAT-Logo-load.gif') no-repeat center center;
+    background-size: contain;
+    left: 45%;
+    top: 45%;
+}
+
+
+
+/* ---------Loading End------- */
+.designbox {
+    width: 19%;
+    border: 1px solid #000;
+    /* padding:5px; */
+    margin: 4px;
+    padding: 1em;
+    /* float :left; */
+
+}
+
+.form {
+    width: 70%;
+    margin: auto;
+    margin-left: 25%;
+}
+
+/* table {
+    margin: auto;
+    padding: 5px;
+} */
+
+tr input {
+    margin: 7px;
+    padding: 11px;
+}
+
+.main-heading {
+    display: block;
+    width: 1000px;
+    text-align: center;
+}
+
+.main-heading {
+    margin: 10px;
+    padding: 0px;
+    width: 200px;
+}
+
+.tdd {
+    margin: 10px;
+    padding: 0px;
+    width: 200px;
+}
+
+.user-design {
+    margin: auto;
+    width: 40%;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+input#user1 {
+    font-size: 18px;
+    border-radius: 8px 15px 15px 8px;
+    text-align: center;
+    outline: none;
+    width: 133px;
+    height: 31px;
+    margin-right: -19px;
+    font-weight: 700;
+}
+
+.displayN {
+    display: none;
+}
+
+.deletData {
+    display: none;
+}
+
+table#hedigDesign {
+    width: 52%;
+    font-size: 20px;
+    padding: 0px;
+    font-weight: bold;
+    /* margin-bottom: -15px; */
+    margin: auto;
+    margin-left: 25.4%;
+    text-align: center;
+}
+
+td.htd {
+    width: 205px;
+}
+
+.iubat {
+    display: flex;
+    margin: 0px auto;
+    width: 85%;
+    text-align: center;
+}
+
+.btn-design {
+    margin: auto;
+    width: 52%;
+    text-align: center;
+    height: 40px;
+    margin-top: 16px;
+    margin-left: 25.5%;
+    /* margin-bottom: 25.5%; */
+}
+
+button.calculateBtn {
+    width: 32%;
+    height: 35px;
+    font-size: 20px;
+}
+
+button.reasetbtn {
+    width: 35%;
+    height: 35px;
+    font-size: 20px;
+    background-color: #ff7d68;
+    color: white;
+}
+
+button.add {
+    width: 31%;
+    height: 35px;
+    font-size: 20px;
+}
+
+input.box {
+    width: 95%;
+}
+
+@media screen and (max-width: 700px) {
+
+
+    table#hedigDesign {
+        width: 84.5%;
+        font-size: 14px;
+        margin: auto;
+
+    }
+
+    h1.name-iubat {
+        margin-top: 15px;
+        font-size: 22px;
+    }
+
+    .user-design {
+        margin: auto;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 8%;
+        margin-top: 8%;
+    }
+
+    .iubat {
+        display: block;
+        margin: 0px auto;
+        width: 100%;
+        text-align: center;
+    }
+
+    h1.name-iubat {
+        margin-top: 15px;
+        font-size: 2rem;
+        padding: 6px;
+        margin: 1px;
+    }
+
+    input.box {
+        width: 95%;
+    }
+
+    .form {
+        width: 100%;
+        margin: auto;
+        margin-left: 7%;
+    }
+
+    .Dsbutton {
+        width: 100%;
+        display: block;
+        margin: 0.4em auto;
+    }
+
+    .btn-design {
+        margin: auto;
+        width: 100%;
+        text-align: center;
+        height: 50%;
+        margin-top: 16px;
+        /* margin-bottom: 25.5%;; */
+    }
+
+    button.calculateBtn {
+        width: 85%;
+        height: 35px;
+        font-size: 20px;
+    }
+
+    button.reasetbtn {
+        width: 85%;
+        height: 35px;
+        font-size: 20px;
+        background-color: #ff7d68;
+        color: white;
+    }
+
+    button.add {
+        width: 85%;
+        height: 35px;
+        font-size: 20px;
+    }
+
+}
+
+/* @media screen and (min-width: 551px) and (max-width: 1050px) { */
+@media screen and (min-width: 701px) and (max-width: 1050px) {
+    
+    footer {
+        background: #1A1E25;
+        color: #868c96;
+        margin-bottom: -5%;
+    }
+
+    .btn-design {
+        margin: auto;
+        width: 52%;
+        text-align: center;
+        height: 40px;
+        margin-left: 25.5%;
+        /* margin-bottom: 35.5%; */
+
+    }
+
+    button.calculateBtn {
+        width: 30%;
+
+    }
+
+    button.reasetbtn {
+        width: 30%;
+
+    }
+
+    button.add {
+        width: 37%;
+
+    }
+
+    .grade-design {
+        margin: auto;
+        width: 52%;
+        margin-left: 25.5%;
+        margin-top: 28%;
+        margin-bottom: 25px;
+    }
+
+}
+
+.msg {
+    color: blue;
+    margin-bottom: 0.8rem;
+    font-size: 1.6rem;
+}
+
+button.addRowbtn {
+    width: 80px;
+    height: 32px;
+    font-size: 1rem;
+    background: #ceffcf;
+    border-radius: 2px 0px 0px 0px;
+}
+
+.lod {
+    margin-top: 1rem;
+}
+
+h1.name-iubat {
+    margin-top: 15px;
+    font-size: 31px;
+}
+
+input:focus {
+    outline: 2px solid rgb(25, 187, 228);
+    /* border-radius: 7px; */
+}
+
+.Dsbutton {
+    display: inline-block;
+}
+
+.modal-title {
+    margin-bottom: 0;
+    line-height: 1.5;
+    margin-left: 33%;
+}
+
+.grade-design {
+    margin: auto;
+    width: 52%;
+    margin-left: 25.5%;
+    margin-top: 20px;
+    margin-bottom: 25px;
+}
+
+.table1 td {
+    padding: 7px;
+    /* margin: 8px; */
+    /* width: 27%; */
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 900;
+}
+
+.table1 tr:nth-child(even) {
+    background-color: #d7e1ec;
+}
+
+.table1 tr:nth-child(odd) {
+    background-color: #e6f0ff;
+}
+
+.line1 {
+
+    height: 1px;
+    background-color: black;
+    margin: auto;
+    width: 88%;
+    margin-bottom: 10px;
+
+}
+
+
+/* foter design */
+
+
+
+footer {
+    background: #1A1E25;
+    color: #868c96;
+    margin-bottom: -4%;
+    margin-top: 40%;
+}
+
+footer p {
+    padding: 10px 0;
+    text-align: center;
+}
+
+footer img {
+    width: 44px;
+}
+
+
+
+/* foter design end*/
+
+    </style>
+</head>
+
+<body>
+    <div class="lod">
+        <!--<div id="preloader"></div> -->
+        <div id="content">
+             <div class="iubat">
+                <img width="85px" height="70px" src="image/iubat.png" alt="">
+             
+            </div>
+      
+            <div class="user-design">
+
+                <h2 class="msg">How Many Courses You Calculate</h2>
+                <hr class="line1">
+                <input id="user1" class="user" type="number">
+                <button class="addRowbtn">Add Sub</button>
+            </div>
+
+            <div class="deletTdata">
+                <table border="1px" id="hedigDesign" class="hdata deletData tdata form">
+                    <tr class="htr">
+                        <td class="htd">Course Name</td>
+                        <td class="htd">Credit</td>
+                        <td class="htd">Grade</td>
+                        <td class="htd">Show Grade</td>
+                    </tr>
+
+
+                </table>
+            </div>
+
+
+            <!-- <table  class=" ">
+
+                </table> -->
+
+
+
+            <div class="btn-design">
+                <button class="calculateBtn Dsbutton">Calculate</button>
+                <button data-toggle="modal" data-target="#signup" class="add Dsbutton">Download-pdf</button>
+                <button class="reasetbtn Dsbutton">Reset</button>
+
+            </div>
+
+            <!-- <div class="grade-design displayN">
+                <h2 class="sgpa">SGPA -</h2>
+                <h2 class="cgpa">CGPA -</h2>
+                <h2 class="total-credit">Total Complete Credit -</h2>
+                <h2 class="statuss">Status -</h2>
+
+            </div> -->
+
+            <table border="1px" class="table1 grade-design displayN">
+                <tr>
+                    <td>SGPA</td>
+                    <td class="sgpa">0.00</td>
+                </tr>
+
+                <tr>
+                    <td>CGPA</td>
+                    <td class="cgpa">0.00</td>
+                </tr>
+                <tr>
+                    <td>Total Credit</td>
+                    <td class="total-credit">0.00</td>
+                </tr>
+                <tr>
+                    <td>Status</td>
+                    <td class="statuss">No Status</td>
+                </tr>
+            </table>
+
+
+
+            <!-- ----- popup box strat-------- -->
+            <div class="modal fade" id="signup" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Fill Up The Form</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form action="">
+                                <div class="form-group">
+                                    <label>Full Name</label>
+                                    <input type="text" class="form-control userName" placeholder="Md Example Hasan">
+                                </div>
+                                <div class="form-group">
+                                    <label>Id</label>
+                                    <input type="number" class="form-control userId" placeholder="20103178">
+                                </div>
+                                <div class="form-group">
+                                    <label>Program</label>
+                                    <input type="text" class="form-control userProgram" placeholder="BCSE">
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-success btn-block userBtn"
+                                data-dismiss="modal">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ----- popup box end-------- -->
+
+            <!-- foter design -->
+            <footer class="foter-design">
+                <p>Copyright &copy; 2021 <a href="https://www.facebook.com/hmdkamrul.tk/" target="_blank">HMD Kamrul</a> All Rights
+                    Reserved.</p>
+            </footer>
+            <!-- foter end -->
+
+        </div>
+    </div>
+    <!-- <a href="#" class="nav-link" data-toggle="modal" data-target="#signup">Sign Up</a> -->
+    <!-- loder html------------ -->
+
+
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    
+
+  <script src="main.js"></script>
+</body>
+</html>
